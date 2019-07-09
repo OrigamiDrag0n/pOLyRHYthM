@@ -55,10 +55,11 @@ from numpy import linspace
 ###The mainloop###
 
 beats = [2,3,4,5,6,10,12,15,20,30,60]                  #The individual rhythms (number of beats per rotation)
+beats.reverse()
 radii = list(linspace(0,400,len(beats)+1))             #Radii of the circles
 steps = 0                                              #Initial rotation (relative to the lcm of the beats)
 instrument = 52                                        #Midi instrument number
-notes = [0,4,7,12,16,19,24,28,31,36,40]                #Note values 
+notes = [30,34,37,42,46,49,54,58,61,66,70]             #Note values 
 l = lcm(beats)                                         #Smallest increment (lowest common multiple of all the beats)
 tempo = 40                                             #Rotations per minute
 playing = True                                         #Autoplay
